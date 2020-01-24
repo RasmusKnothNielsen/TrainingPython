@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Read the file and print the content
-df = pd.read_csv('../Data/MonthlySales.csv')
+df = pd.read_csv('../Data/MonthlyProductSales.csv', encoding='latin-1')
 print(df)
 
 # Print the first 10 entries from the CSV
@@ -17,7 +17,7 @@ print(df.describe())
 print(df.info())
 
 # Return as a series
-s = df['month']
+s = df['Product Name']
 
 # Get the count of each individual value
 print(s.value_counts(dropna=False))
